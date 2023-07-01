@@ -1,0 +1,67 @@
+{
+    "posts": [
+      {
+        "id": 1,
+        "username": "Ray_Mcf",
+        "badge": "https://cdn.pastemagazine.com/www/blogs/lists/New_Chucky.png",
+        "content": "Check out this Horror! 🔥",
+        "likes": 25,
+        "comments": [
+          {
+            "id": 1,
+            "username": "Cole_Go",
+            "badge": "https://cdn.pastemagazine.com/www/blogs/lists/Screen%20shot%202013-08-02%20at%204.55.45%20PM_400x400_scaled_cropp.jpg",
+            "comment": "Horriful photo! 😍"
+          },
+          {
+            "id": 2,
+            "username": "Katie_ST",
+            "badge": "https://cdn.pastemagazine.com/www/blogs/lists/scream-ghostface_400x400_scaled_cropp.jpg",
+            "comment": "How Gory! 🙌"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "username": "Gab_P",
+        "badge": "https://cdn.pastemagazine.com/www/blogs/lists/pinhead1_400x400_scaled_cropp.jpg",
+        "content": "So excited to watch Evil Dead Rise! 🎬",
+        "likes": 50,
+        "comments": [
+          {
+            "id": 1,
+            "username": "Jak_Stor",
+            "badge": "https://cdn.pastemagazine.com/www/blogs/lists/hanniballlecter_400x400_scaled_cropp.jpg",
+            "comment": "Can't wait to see it! 🔥"
+          },
+          {
+            "id": 2,
+            "username": "Shady_Been",
+            "badge": "https://cdn.pastemagazine.com/www/blogs/lists/friday-the-13thx-large.jpg",
+            "comment": "Yes, can't wait! 💫"
+        }
+    ]
+  },
+        {
+         "id": 3,
+         "username": "Ray158",
+         "badge": "https://cdn.pastemagazine.com/www/blogs/lists/freddy-krueger_400x400_scaled_cropp.jpg",
+         "content": "Cool stuff! 🔥",
+         "likes": 180,
+        "comments": [
+         {
+        "id": 1,
+        "username": "Gabby785",
+        "badge": "https://cdn.pastemagazine.com/www/blogs/lists/myers_400x400_scaled_cropp.jpg",
+        "comment": "Wow, that's Haunted! 🙌"
+          },
+       {
+        "id": 2,
+        "username": "Cole598",
+        "badge": "https://cdn.pastemagazine.com/www/blogs/lists/freddy-krueger_400x400_scaled_cropp.jpg",
+        "comment": "Wowsah! 🔥"
+      }
+    ]
+  }
+]
+}
