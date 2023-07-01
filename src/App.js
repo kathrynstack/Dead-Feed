@@ -1,24 +1,13 @@
 import React from 'react';
-import Login from './components/login';
+import Landing from './components/landing'
 
-import './App.css';
-import React, { useState } from "react";
-import Footer from "./components/footer/index";
-import Header from "./components/header/index";
-import Profile from "./components/profile/index";
-
-
-const App = () => {
+function App() {
   return (
-    <div className="App">
-
-
-      
-      
-      
-
-    </div>
+   <div className='app'>
+    <Landing />
+   </div>
   );
 };
+
 
 export default App;

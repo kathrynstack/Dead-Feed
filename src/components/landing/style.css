@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Creepster');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+h2 {
+    font-family: 'Creepster';
+}
+
+h1 {
+    font-family: 'Poppins';
+    font-size: medium;
+}
