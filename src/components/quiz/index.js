@@ -112,27 +112,27 @@ const Quiz = () => {
         {
             name: 'Ghostface',
             imageUrl: 'https://cdn.pastemagazine.com/www/blogs/lists/scream-ghostface_400x400_scaled_cropp.jpg',
-            description: 'You are Ghostface! You are a silent and remorseless killer, who enjoys stalking victims with a kitchen knife.',
+            description: 'You are a silent and remorseless killer, who enjoys stalking victims with a kitchen knife.',
         },
         {
             name: 'Chucky',
             imageUrl: 'https://cdn.pastemagazine.com/www/blogs/lists/New_Chucky.png',
-            description: 'You are Chucky! You are a possessed doll who will stop at nothing to get revenge on your enemies.',
+            description: 'You are a possessed doll who will stop at nothing to get revenge on your enemies.',
         },
         {
             name: 'Jigsaw',
             imageUrl: 'https://cdn.pastemagazine.com/www/blogs/lists/Screen%20shot%202013-08-02%20at%204.55.45%20PM_400x400_scaled_cropp.jpg',
-            description: 'You are Jigsaw! You never intends to kill your subjects; you trap them to see if they have the will to live.',
+            description: 'You never intend to kill your subjects; you trap them to see if they will "Live or Die".',
         },
         {
             name: 'Freddy',
             imageUrl: 'https://cdn.pastemagazine.com/www/blogs/lists/freddy-krueger_400x400_scaled_cropp.jpg',
-            description: 'You are Freddy Krueger! You invade dreams and haunt people with your razor-sharp glove.',
+            description: 'You invade dreams and haunt people with your razor-sharp glove.',
         },
         {
             name: 'Hannibal',
             imageUrl: 'https://cdn.pastemagazine.com/www/blogs/lists/hanniballlecter_400x400_scaled_cropp.jpg',
-            description: 'You are Hannibal Lecter! You enjoy tormenting your victims eating their flesh and look classy doing it.',
+            description: 'You enjoy tormenting your victims eating their flesh and look classy doing it.',
         },
 
     ];
