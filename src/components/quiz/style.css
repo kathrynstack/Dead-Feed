@@ -1,0 +1,128 @@
+body {
+    background-color: #111;
+    color: #fff;
+}
+
+/* Quiz Container */
+.quiz-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
+    background-color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Results Container */
+.result-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.result-container h2 {
+    margin-bottom: 10px;
+    color: #ff0000;
+}
+
+.result-container h3 {
+    margin-bottom: 20px;
+    color: #ff0000;
+}
+
+.result-container p {
+    margin-bottom: 20px;
+    color: #ba1b1b;
+}
+
+.result-container img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Question Container */
+.question-container {
+    margin-bottom: 20px;
+}
+
+.question-container h2 {
+    margin-bottom: 10px;
+    color: #ff0000;
+}
+
+.question-container p {
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Options Container */
+.options-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: auto;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #333;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🔪</text></svg>") 16 0, auto;
+    /*!emojicursor.app*/
+}
+
+.option img {
+    width: 150px;
+    height: 150px;
+    margin-block: unset;
+    object-fit: cover;
+    border: 1px transparent;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.option span {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.option.selected img {
+    background-color: #555;
+    border: 2px solid #ff0000;
+    border-color: #ff0000;
+    filter: saturate(200%);
+}
+
+/* Restart Button */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #555;
+    color: #fff;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🔪</text></svg>") 16 0, auto;
+    /*!emojicursor.app*/
+}
+
+button:hover {
+    background-color: #ff0000;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🔪</text></svg>") 16 0, auto;
+    /*!emojicursor.app*/
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🔪</text></svg>") 16 0, auto;
+    /*!emojicursor.app*/
+}
