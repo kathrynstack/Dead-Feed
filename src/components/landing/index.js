@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './style.css';
-import { Button } from 'react-bootstrap';
+import ReactDOM from 'react-dom';
 
 
 export default function Landing() {
@@ -25,7 +25,6 @@ export default function Landing() {
                                     <h1>Horror Icon Quiz</h1>
                                 </section>
                                 <section>
-                                <Button style={{backgroundImage:"url('./)",backgroundSize:"cover", width:"40px", height:"40px"}}></Button>
                                     <h1>Community Chat</h1>
                                 </section>
                             </section>
@@ -38,3 +37,17 @@ export default function Landing() {
     </body>
     );
 };
+
+class Button extends React.Component {
+    handleClick() {
+      alert('Button clicked!');
+    }
+  
+    render() {
+      return (
+        <button onClick={this.handleClick}>Click me!</button>
+      );
+    }
+  }
+  
+  ReactDOM.render(<Button />, document.getElementById('root'));
