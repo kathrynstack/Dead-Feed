@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import "./style.css";
@@ -226,4 +224,3 @@ const Quiz = () => {
 };
 
 export default Quiz;
->>>>>>> 94a652345a87447a6e6b9dae26db86035783abbd
