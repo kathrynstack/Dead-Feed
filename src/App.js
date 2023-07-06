@@ -1,11 +1,21 @@
-import React from 'react';
-import Landing from './components/landing'
+import './App.css';
+import React, { useState } from "react";
+import Footer from "./components/footer";
+import Header from "./components/header";
+import Profile from "./components/profile";
+import Login from './components/login';
 
-function App() {
+
+const App = () => {
   return (
-   <div className='app'>
-    <Landing />
-   </div>
+    <div className="App">
+
+
+      <Footer />
+      
+      
+
+    </div>
   );
 };
 
