@@ -1,11 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Creepster');
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
-h2 {
+h1 {
     font-family: 'Creepster';
 }
 
-h1 {
+
+h2 {
     font-family: 'Poppins';
     font-size: medium;
+    text-align: left;
+    font-weight: bold;
+
+}
+
+h3 {
+    font-family: 'Poppins';
+    font-size: small;
+}
+
+button {
+    border-radius: 10px;
+    background-color: white;
+    padding-bottom: 10px;
+    border: none;
+    cursor: pointer;
 }
