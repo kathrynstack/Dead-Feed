@@ -1,23 +1,33 @@
 # Dead Feed
 
-## Link to Live Application
+## Table of Contents:
+  - [Description](#description)
+  - [Usage](#usage)
+  - [Installation](#installation)
+  - [Tests](#tests)
+  - [License](#license)
+  - [Resources](#resources)
+ 
+## Description
+```
+This application is for Horror Movie lovers
 
+```
 
-## About this Application
+## Usage
+- [Video Walk-through]()
+- Deployed Application
+- Images: ![]()
+  
 
+## Installation 
+Heroku
 
-## Made With
-* React
-* Node.js
-* BootStrap
-* Heroku
-* Express.js
-* Webpack.js
+## Test
+yes
 
-## Credits
-* https://github.com/raymcfarlane
-* https://github.com/Kathrynstack
-* https://github.com/CGoddard1
-* https://github.com/gabriellapinto
+## License
+Copyright <2023>
 
-
+## Resources
+- Presentation
