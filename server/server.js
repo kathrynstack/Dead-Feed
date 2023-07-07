@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const authRoutes = require('./src/routes/authRoutes');
 const postRoutes = require('./src/routes/postRoutes');
 const userRoutes = require('./src/routes/userRoutes');
+const { ApolloServer } = require('apollo-server-express');
 const { graphqlHTTP } = require('express-graphql');
 const { buildSchema } = require('graphql');
 
@@ -46,3 +47,5 @@ const root = {
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
+
+
