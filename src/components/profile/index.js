@@ -9,7 +9,7 @@ export default function Profile() {
             <div className="container py-5 h-100">
                 <div className="row d-flex justify-content-center align-items-center h-100">
                     <div className="col-12 col-md-8 col-lg-6 col-xl-5">
-                        <div className="card bg-white text-dark">
+                        <div className="card bg-dark text-dark">
                             <div className="card-body p-5 text-center">
                                 <section className="profile">
                                     <div className="row login_box">
