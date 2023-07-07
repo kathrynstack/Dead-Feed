@@ -1,0 +1,7 @@
+#header-color {
+    border-color: #35240f;
+	background: #603200;
+	background: -moz-linear-gradient(left, #603200 0%, #190c00 88%, #2b1212 100%);
+	background: -webkit-linear-gradient(left,#603200 0%,#190c00 88%,#2b1212 100%);
+	background: linear-gradient(to right, #603200 0%, #190c00 88%, #2b1212 100%);
+}
