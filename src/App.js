@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div className="App">
       <h1>Dead Feed</h1>
-      <Footer />
+      <Login />
       
       
       
