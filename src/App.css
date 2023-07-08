@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  justify-content: center;
 }
 
 .App-logo {
@@ -35,4 +36,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.sub-main {
+  justify-content: center;
+  box-shadow: 11px 12px 13px 12px rgb(207, 207 207);
 }
