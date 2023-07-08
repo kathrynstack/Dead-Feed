@@ -1,11 +1,10 @@
 import './App.css';
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
-import Profile from "./components/profile";
-import Login from './components/login';
-import Quiz from './components/quiz';
-// import { profile } from 'console';
+// import React, { useState } from "react";
+import Footer from "./components/footer/index";
+import Header from "./components/header/index";
+import Profile from "./components/profile/index";
+import Login from "./components/login/index";
+import "./assets/global-stylesheet/style.css";
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -14,29 +13,13 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <ApolloProvider client={client}>
-      <Router>
-        <div className="flex-column justify-center align-center min-100-vh bg-primary">
-          <Routes>
-            <Route 
-              path="/" 
-              element={<Profile />}
-            />
-            <Route 
-              path="/login" 
-              element={<Login />}
-            />
-            <Route 
-              path="/quiz" 
-              element={<Quiz />}
-            />
-            {/* <Route 
-              path=""
-              element={</>} */}
-            </Routes>
-        </div>
-      </Router>
-    </ApolloProvider>
+    <div className="App">
+      <h1>Dead Feed</h1>
+      <Login />
+      
+      
+      
+    </div>
   );
 }
 
