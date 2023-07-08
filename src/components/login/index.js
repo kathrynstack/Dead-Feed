@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './style.css';
-import userData from '../../seeds/userData.json';
+import userData from '../login/userData.json';
 
 export default function Login() {
     const [email, setEmail] = useState('');
