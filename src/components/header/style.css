@@ -1,0 +1,12 @@
+@import url('https://fonts.cdnfonts.com/css/horror-type');
+
+.name {
+    background-color: #333;
+    color: #800000;
+    text-align: left;
+    font-family: 'Horror Type', sans-serif;
+    font-size: 5em;
+    letter-spacing: 7px;
+    text-shadow: 0 0 5px 2px white;
+    padding-left: 30px;
+  }
