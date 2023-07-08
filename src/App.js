@@ -6,8 +6,12 @@ import Profile from "./components/profile/index";
 import Login from "./components/login/index";
 import "./assets/global-stylesheet/style.css";
 
+const client = new ApolloClient({
+  uri: '/graphql',
+  cache: new InMemoryCache(),
+});
 
-const App = () => {
+function App() {
   return (
     <div className="App">
       <h1>Dead Feed</h1>
@@ -17,6 +21,6 @@ const App = () => {
       
     </div>
   );
-};
+}
 
 export default App;

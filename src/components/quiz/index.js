@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import "./style.css";
+import Footer from "../footer";
 
 // Quiz questions 
 const Quiz = () => {
@@ -217,6 +218,7 @@ const Quiz = () => {
                     <button onClick={handleNextQuestion} disabled={selectedOption === null}>
                         {currentQuestion === questions.length - 1 ? 'Finish' : 'Next'}
                     </button>
+                    <Footer />
                 </div>
             )}
         </div>
