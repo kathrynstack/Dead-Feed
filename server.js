@@ -1,8 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const authRoutes = require('./src/routes/authRoutes');
-const postRoutes = require('./src/routes/postRoutes');
-const userRoutes = require('./src/routes/userRoutes');
+const authRoutes = require('./server/routes/authRoutes');
+const postRoutes = require('./server/routes/postRoutes');
+const userRoutes = require('./server/routes/userRoutes');
 const { ApolloServer } = require('apollo-server-express');
 const { graphqlHTTP } = require('express-graphql');
 const { buildSchema } = require('graphql');
@@ -25,15 +25,6 @@ app.use('/api/auth', authRoutes);
 app.use('/api/posts', postRoutes);
 app.use('/api/users', userRoutes);
 
-app.use(
-  '/graphql',
-  graphqlHTTP({
-    schema: schema,
-    rootValue: root,
-    graphiql: true, 
-  })
-);
-
 const schema = buildSchema(`
   type Query {
     hello: String
@@ -43,9 +34,15 @@ const root = {
   hello: () => 'Hello, world!',
 };
 
+app.use(
+  '/graphql',
+  graphqlHTTP({
+    schema: schema,
+    rootValue: root,
+    graphiql: true,
+  })
+);
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
-
-
