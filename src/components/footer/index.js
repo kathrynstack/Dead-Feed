@@ -1,5 +1,5 @@
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.css';
+import "bootstrap/dist/css/bootstrap.css";
 import "./style.css";
 import { Link } from "react-router-dom";
 import HomeIcon from "./icons/home.png";
@@ -8,28 +8,30 @@ import NewPostIcon from "./icons/new-post.png";
 import ProfileIcon from "./icons/profile.png";
 import Profile from "../profile";
 
-
 function Footer() {
     return (
-
         <nav className="navbar">
             <div className="home">
-                <img src={HomeIcon} alt="Home" />
+                <Link to="/landing">
+                    <img src={HomeIcon} alt="Home" />
+                </Link>
             </div>
-
             <div className="quiz">
-                <img src={QuizIcon} alt="Quiz" />
+                <Link to="/quiz">
+                    <img src={QuizIcon} alt="Quiz" />
+                </Link>
             </div>
-
             <div className="new-post">
-                <img src={NewPostIcon} alt="NewPost" />
+                <Link to="/new-post">
+                    <img src={NewPostIcon} alt="NewPost" />
+                </Link>
             </div>
-
             <div className="profile">
-                <img src={ProfileIcon} alt="Profile" />
+                <Link to="/">
+                    <img src={ProfileIcon} alt="Profile" />
+                </Link>
             </div>
         </nav>
-
     );
 }
 
