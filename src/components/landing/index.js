@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './style.css';
-import quizbtn from './quizbtn.png';
+// import quizbtn from './quizbtn.png';
 
 var posts = [
     { id: 1, description: "this is my fav movie" },
