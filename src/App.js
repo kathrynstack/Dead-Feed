@@ -11,7 +11,7 @@ const App = () => {
     <div className="App">
 
 
-      <Footer />
+      <Login />
       
       
 
