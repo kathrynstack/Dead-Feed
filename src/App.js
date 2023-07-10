@@ -1,22 +1,28 @@
 import './App.css';
-import React, { useState } from "react";
-import Footer from "./components/footer";
-import Header from "./components/header";
-import Profile from "./components/profile";
-import Login from './components/login';
+// import React, { useState } from "react";
+import Footer from "./components/footer/index";
+import Header from "./components/header/index";
+import Profile from "./components/profile/index";
+import Login from "./components/login/index";
+import Landing from "./components/landing/index";
+import "./assets/global-stylesheet/style.css";
+import { ApolloClient, InMemoryCache} from '@apollo/client';
 
+const client = new ApolloClient({
+  uri: '/graphql',
+  cache: new InMemoryCache(),
+});
 
-const App = () => {
+function App() {
   return (
     <div className="App">
-
-
-      <Login />
+      <h1>Dead Feed</h1>
+      <Landing />
       
       
-
+      
     </div>
   );
-};
+}
 
 export default App;
