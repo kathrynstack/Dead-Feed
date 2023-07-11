@@ -6,17 +6,14 @@ module.exports = {
     const foundUser = await User.findOne({
       $or: [{ _id: user ? user._id : params.id }, { username: params.username }],
     });
-
     if (!foundUser) {
       return res.status(400).json({ message: 'Cannot find a user with this id!' });
     }
-
     res.json(foundUser);
   },
 
   async createUser({ body }, res) {
     const user = await User.create(body);
-
     if (!user) {
       return res.status(400).json({ message: 'Something is wrong!' });
     }
@@ -29,9 +26,7 @@ module.exports = {
     if (!user) {
       return res.status(400).json({ message: "Can't find this user" });
     }
-
     const correctPw = await user.isCorrectPassword(body.password);
-
     if (!correctPw) {
       return res.status(400).json({ message: 'Wrong password!' });
     }
