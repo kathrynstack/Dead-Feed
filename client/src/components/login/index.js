@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import './style.css';
 import userData from './userData.json';
@@ -58,9 +59,8 @@ export default function Login() {
                         <div>
                             <p className="mb-0">
                                 Don't have an account?{' '}
-                                <a href="#!" className="text-white-50 fw-bold">
-                                    Sign Up
-                                </a>
+                                <Link to="/signup" className="link">Signup</Link>
+                                
                             </p>
                         </div>
                     </form>

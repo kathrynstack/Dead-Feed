@@ -1,11 +1,12 @@
 import './App.css';
 import React, { useState } from "react";
-import Footer from "./components/footer/index";
 import Header from "./components/header/index";
 import Profile from "./components/profile/index";
 import Login from "./components/login/index";
 import Landing from "./components/landing/index";
 import Quiz from "./components/quiz/index";
+import Signup from "./components/sign-up/index";
+import NewPost from "./components/new-post/index";
 import "./assets/global-stylesheet/style.css";
 // import React from 'react';
 import {
@@ -48,15 +49,40 @@ const client = new ApolloClient({
 
 function App() {
   return (
-      <ApolloProvider client={client}>
+    <ApolloProvider client={client}>
+      <Header />
       <Router>
-        <h1>Dead Feed</h1>
         <Routes>
-          <Route path="/" element={<Quiz />} />
-        </Routes>
+          <Route
+            path="/login"
+            element={<Login />}
+          />
+          <Route
+            path="/signup"
+            element={<Signup />}
+          />
+          <Route
+            path="/"
+            element={<Landing />}
+          />
+          <Route
+            path="/quiz"
+            element={<Quiz />}
+          />
+          <Route
+            path="/profile"
+            element={<Profile />}
+          />
+          <Route
+            path="/newpost"
+            element={<NewPost />}
+          />
 
-        </Router>
-      </ApolloProvider>
+        
+      </Routes>
+
+    </Router>
+    </ApolloProvider >
 
 
 

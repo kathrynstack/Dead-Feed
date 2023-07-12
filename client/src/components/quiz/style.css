@@ -11,8 +11,8 @@ body {
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
     background-color: #000000;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 white;
 }
 
 /* Results Container */
@@ -27,17 +27,17 @@ body {
 
 .result-container h2 {
     margin-bottom: 10px;
-    color: #ff0000;
+    color: #9a0707;
 }
 
 .result-container h3 {
     margin-bottom: 20px;
-    color: #ff0000;
+    color: #9a0707;
 }
 
 .result-container p {
     margin-bottom: 20px;
-    color: #ba1b1b;
+    color: #9a0707;
 }
 
 .result-container img {
@@ -53,8 +53,8 @@ body {
 }
 
 .question-container h2 {
-    margin-bottom: 10px;
-    color: #ff0000;
+    margin-bottom: 20px;
+    color: #9a0707;
 }
 
 .question-container p {
@@ -99,8 +99,8 @@ body {
 
 .option.selected img {
     background-color: #555;
-    border: 2px solid #ff0000;
-    border-color: #ff0000;
+    border: 2px solid #9a0707;
+    border-color: #9a0707;
     filter: saturate(200%);
 }
 
@@ -116,7 +116,7 @@ button {
 }
 
 button:hover {
-    background-color: #ff0000;
+    background-color: #9a0707;
     cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🔪</text></svg>") 16 0, auto;
     /*!emojicursor.app*/
 }
