@@ -50,9 +50,9 @@ function App() {
   return (
       <ApolloProvider client={client}>
       <Router>
-        <h1>Dead Feed</h1>
+        <Header />
         <Routes>
-          <Route path="/" element={<Quiz />} />
+          <Route path="/" element={<Login />} />
         </Routes>
 
         </Router>
