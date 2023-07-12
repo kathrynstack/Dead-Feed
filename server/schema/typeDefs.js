@@ -36,6 +36,7 @@ const typeDefs = gql`
     createPost(title: String!, content: String!): Post
     deletePost(id: ID!): ID
     likePost(id: ID!): Post
+    deleteUser(id: ID!): ID
     followUser(id: ID!): User
   }
 `;
