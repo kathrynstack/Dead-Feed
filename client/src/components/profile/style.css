@@ -1,15 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+
 .card-body {
     border-radius: 5px;
-    background-color: gray;
-    width: 450px;
-    height: 600px;
-    display: flex;
-}
-
-.container {
-    justify-content: center;
-    align-items: center;
-    position: absolute;
+    box-shadow: 0 0 10px 0 white;
 }
 
 .outer {
@@ -24,4 +17,10 @@
 .bio {
    padding: 20px; 
    resize: none;
+}
+
+h1 {
+    color: #9a0707;
+    text-align: center;
+    font-family: 'Nosifer', sans-serif;
 }

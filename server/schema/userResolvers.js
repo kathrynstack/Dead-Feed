@@ -66,7 +66,17 @@ const userResolvers = {
 
       return userToFollow;
     },
+
+    deleteUser: async (_, { id }) => {
+      const response = await User.findOneAndDelete({_id: id});
+      if (response)
+      {
+        return `User Deleted`;
+      }
+      return `User not found`;
+    },
   },
+  
   User: {
     posts: async (user) => Post.find({ author: user._id }),
     followers: async (user) => User.find({ _id: { $in: user.followers } }),
