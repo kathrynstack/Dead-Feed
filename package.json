@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
+  "proxy": "http://localhost:3000/",
   "scripts": {
     "start": "node server/server.js --ignore client",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
