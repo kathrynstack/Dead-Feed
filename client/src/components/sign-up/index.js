@@ -74,7 +74,7 @@ export default function Signup() {
                         Signup
                     </button>
                     
-                    <Link to="/login">← Go to Login</Link>
+                    <Link to="/login" className="loginLink">← Go to Login</Link>
                 {/* </form> */}
             </div>
         </section>

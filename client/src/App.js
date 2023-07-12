@@ -6,6 +6,7 @@ import Profile from "./components/profile/index";
 import Login from "./components/login/index";
 import Landing from "./components/landing/index";
 import Quiz from "./components/quiz/index";
+import Signup from "./components/sign-up/index";
 import "./assets/global-stylesheet/style.css";
 // import React from 'react';
 import {
@@ -50,9 +51,8 @@ function App() {
   return (
       <ApolloProvider client={client}>
       <Router>
-        <h1>Dead Feed</h1>
         <Routes>
-          <Route path="/" element={<Quiz />} />
+          <Route path="/" element={<Signup />} />
         </Routes>
 
         </Router>
