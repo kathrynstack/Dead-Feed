@@ -1,0 +1,64 @@
+@import url('https://fonts.cdnfonts.com/css/horror-type');
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+
+body {
+    background-color: black;
+    background-image: linear-gradient(to top right, #520000, black);
+  }
+
+  .signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .signup-container {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 0 0 5px 2px white;
+  }
+
+  h2 {
+    color: #800000;
+    text-align: center;
+    font-family: 'Nosifer', sans-serif;
+    font-size: 3em;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px 2px white;
+    font-weight: normal;
+  }
+
+  .form {
+    margin-bottom: 20px;
+    
+  }
+
+  .form input {
+    color: black;
+  }
+
+  input[type="email"],
+  input[type="password"],
+  input[type="username"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+  }
+
+  .loginLink {
+    color: gray;
+    font-weight: bold;
+    padding: 30px;
+    font-size: 15px;
+  }
+
+  .loginLink:hover {
+    color: red;
+  }
+
+  

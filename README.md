@@ -3,34 +3,19 @@
 ## Table of Contents:
   - [Description](#description)
   - [Usage](#usage)
-  - [Installation](#installation)
-  - [Tests](#tests)
   - [License](#license)
-  - [Resources](#resources)
- 
+  
 ## Description
-```
-This application is for Horror Movie lovers
 
-```
+Dead Feed is a social media based platform where horror lovers can come together to talk or post about their favorite movies and characters. Users have the option to take a fun personality quiz, post pictures and opinions, view their profile, and enjoy their Dead Feed!
 
 ## Usage
-- [Video Walk-through]()
-- Deployed Application
+- Deployed Application:
+https://sleepy-cove-79106-da36d740fd7b.herokuapp.com/
 - Images: ![]()
   
-
-## Installation 
-Heroku
-
-## Test
-yes
-
 ## License
 Copyright <2023>
-
-## Resources
-- Presentation
 
 ## Contributers
 <ul>
