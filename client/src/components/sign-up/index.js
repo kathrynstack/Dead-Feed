@@ -1,45 +1,47 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useMutation } from '@apollo/client';
+import { ADD_USER } from '../../utils/mutations';
+import Login from '../login/index';
 import 'bootstrap/dist/css/bootstrap.css';
 import './style.css';
-// import userData from './userData.json';
 
 export default function Signup() {
-    // const [formState, setFormState] = useState({ username: '', email: '', password: '' });
-    // const [addUser] = useMutation(ADD_USER);
+    const [formState, setFormState] = useState({ username: '', email: '', password: '' });
+    const [addUser] = useMutation(ADD_USER);
 
-    // const handleFormSubmit = async (event) => {
-    //     event.preventDefault();
-    //     const mutationResponse = await addUser({
-    //         variables: {
-    //             username: formState.username,
-    //             email: formState.email,
-    //             password: formState.password,
-    //         },
-    //     });
-    //     const token = mutationResponse.data.addUser.token;
-    //     Auth.login(token);
-    // };
+    const handleFormSubmit = async (event) => {
+        event.preventDefault();
+        const mutationResponse = await addUser({
+            variables: {
+                username: formState.username,
+                email: formState.email,
+                password: formState.password,
+            },
+        });
+        const token = mutationResponse.data.addUser.token;
+        // Auth.login(token);
+    };
 
-    // const handleChange = (event) => {
-    //     const { name, value } = event.target;
-    //     setFormState({
-    //         ...formState,
-    //         [name]: value,
-    //     });
-    // };
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        setFormState({
+            ...formState,
+            [name]: value,
+        });
+    };
 
     return (
         <section className="signup">
             <div className="signup-container">
                 <h2>Signup</h2>
-                {/* <form onSubmit={}> */}
+                <form onSubmit={handleFormSubmit}>
                     <div className="form">
                         <input
                             placeholder="Username"
                             type="username"
                             id="username"
-                            // onChange={}
+                            onChange={handleChange}
                             required
                         />
                         <label className="form-label" htmlFor="username">
@@ -51,7 +53,7 @@ export default function Signup() {
                             placeholder="Email"
                             type="email"
                             id="email"
-                            // onChange={}
+                            onChange={handleChange}
                             required
                         />
                         <label className="form-label" htmlFor="email">
@@ -63,7 +65,7 @@ export default function Signup() {
                             placeholder="******"
                             type="password"
                             id="password"
-                            // onChange={}
+                            onChange={handleChange}
                             required
                         />
                         <label className="form-label" htmlFor="password">
@@ -73,9 +75,9 @@ export default function Signup() {
                     <button className="signupBtn" type="submit">
                         Signup
                     </button>
-                    
+
                     <Link to="/login" className="loginLink">← Go to Login</Link>
-                {/* </form> */}
+                </form>
             </div>
         </section>
     );
