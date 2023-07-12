@@ -1,6 +1,15 @@
 .card-body {
-    /* background-image: linear-gradient(white, red); */
     border-radius: 5px;
+    background-color: gray;
+    width: 450px;
+    height: 600px;
+    display: flex;
+}
+
+.container {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
 }
 
 .outer {
