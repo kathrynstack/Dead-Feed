@@ -10,15 +10,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 88vh;
   }
 
   .signup-container {
-    background-color: #333;
-    padding: 20px;
+    /* background-color: #333; */
+    background-image: url(./3839661.jpeg);
+    background-size: 350px;
+    padding: 25px;
     border-radius: 5px;
-    width: 300px;
-    box-shadow: 0 0 5px 2px white;
+    width: 350px;
+    box-shadow: 0 0 10px 0px white;
   }
 
   h2 {
@@ -26,8 +28,8 @@ body {
     text-align: center;
     font-family: 'Nosifer', sans-serif;
     font-size: 3em;
-    letter-spacing: 2px;
-    text-shadow: 0 0 5px 2px white;
+    letter-spacing: 3px;
+    text-shadow: 0 0 6px 3px white;
     font-weight: normal;
   }
 
@@ -51,14 +53,18 @@ body {
   }
 
   .loginLink {
-    color: gray;
+    color: #9a0707;
     font-weight: bold;
     padding: 30px;
     font-size: 15px;
   }
 
   .loginLink:hover {
-    color: red;
+    color: grey;
+  }
+
+  #button {
+    color: #9a0707;
   }
 
   

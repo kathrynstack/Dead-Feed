@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 85vh;
+    height: 88vh;
   }
 
   .login-container {
@@ -29,6 +29,8 @@ body {
     font-size: 3em;
     letter-spacing: 3px;
     text-shadow: 0 0 6px 3px rgb(255, 255, 255);
+    margin-bottom: 30px;
+    font-weight: normal;
     margin-bottom: 30px
   }
 
