@@ -1,0 +1,16 @@
+
+
+.image-upload>input {
+    display: none;
+  }
+
+  #upload-img {
+    margin-top: 50%;
+    height: 80px;
+    width: 50px;
+
+  }
+
+#card {
+  background-color: black;
+}
