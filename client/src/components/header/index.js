@@ -7,7 +7,7 @@ import logo from './red-skull-drawing-skull.png';
 function Header() {
   return (
     <div className="header">
-      <p className="name"><img style={{width:100, height:100}} src={logo} alt="Logo" />Dead Feed</p>
+      <p className="name"><img style={{width:85, height:85}} src={logo} alt="Logo" />Dead Feed</p>
       </div>
   )
 }
