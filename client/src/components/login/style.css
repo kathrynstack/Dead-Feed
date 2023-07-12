@@ -74,3 +74,12 @@ body {
   p {
     color: white;
   }
+
+  .link {
+    color: gray;
+    font-weight: bold;
+  }
+
+  .link:hover {
+    color: red;
+  }
