@@ -10,7 +10,7 @@ const postSchema = new Schema({
         type: String,
         required: true,
     },
-    imageLink: {
+    imageID: {
         type: String,
         required: true
     }
@@ -21,15 +21,9 @@ const pre_delete = async function (next) {
     const posts = await this.model.find(this.getQuery());
     if (posts)
     {
-        // const image_links = posts.map(post => post.imageLink);
-        const image_links = ['64ae270706370748f239dfe6'];
-        console.log(image_links);
-        
+        const image_links = posts.map(post => post.imageID);        
         const response = await imagekit.bulkDeleteFiles(image_links).then(response => {return response});
-        console.log(response);
-        // const response = await Post.deleteMany({_id: {$in: posts}});
     }
-    throw "ERROR";
     next();
 };
 

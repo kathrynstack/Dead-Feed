@@ -2,9 +2,9 @@ const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
 const { authMiddleware } = require('./utils/authUtils');
-
 const { typeDefs, resolvers } = require('./schema');
 const db = require('./config/connection');
+const imagekit = require('./config/imageKitConnection');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -31,11 +31,26 @@ app.get('/api/users', (req, res) => {
   res.json(users.map(user => ({ username: user.username, email: user.email })));
 });
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", 
+      "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
+
+// Required for imagekit auth
+app.get('/imagekit-auth', function (req, res) {
+    var result = imagekit.getAuthenticationParameters();
+    console.log(result);
+    res.json(result);
 });
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+  });
 
+  
 // Create a new instance of an Apollo server with the GraphQL schema
 const startApolloServer = async (typeDefs, resolvers) => {
   await server.start();
