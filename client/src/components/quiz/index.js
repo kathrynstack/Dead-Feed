@@ -189,39 +189,52 @@ const Quiz = () => {
     };
 
     return (
-        <div className="quiz-container">
-            {showResult ? (
-                <div className="result-container">
-                    <h2>Horror Character</h2>
-                    <h3>You are {characterResult.name}!</h3>
-                    <img src={characterResult.imageUrl} alt="Character" />
-                    <p>{characterResult.description}</p>
-                    <button onClick={restartQuiz}>Dare to restart?</button>
-                </div>
-            ) : (
-                <div className="question-container">
-                    <h2>Horror Character Quiz</h2>
-                    <p>{questions[currentQuestion].question}</p>
-                    <div className="options-container">
-                        {questions[currentQuestion].options.map((option, index) => (
-                            <div key={index} className="option">
-                                <img
-                                    src={option.imageUrl}
-                                    alt={`Option ${index + 1}`}
-                                    onClick={() => handleOptionClick(option.score)}
-                                    className={selectedOption === option.score ? 'selected' : ''}
-                                />
-                                <span>{option.text}</span>
+        <div className="container py-7 h-100">
+            <div className="row d-flex justify-content-center align-items-center h-100">
+                <div className="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div className="card bg-dark">
+                        <div className="card-body p-5 text-center">
+                            {showResult ? (
+                                <div className="result-container bg-dark">
+                                    <h2>Horror Character</h2>
+                                    <h3>You are {characterResult.name}!</h3>
+                                    <img src={characterResult.imageUrl} alt="Character" />
+                                    <p>{characterResult.description}</p>
+                                    <button onClick={restartQuiz}>Dare to restart?</button>
+                                </div>
+                            ) : (
+                                <div className="question-container">
+                                    <h2>Horror Character Quiz</h2>
+                                    <p>{questions[currentQuestion].question}</p>
+                                    <div className="options-container">
+                                        {questions[currentQuestion].options.map((option, index) => (
+                                            <div key={index} className="option">
+                                                <img
+                                                    src={option.imageUrl}
+                                                    alt={`Option ${index + 1}`}
+                                                    onClick={() => handleOptionClick(option.score)}
+                                                    className={selectedOption === option.score ? 'selected' : ''}
+                                                />
+                                                <span>{option.text}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                    <button onClick={handleNextQuestion} disabled={selectedOption === null}>
+                                        {currentQuestion === questions.length - 1 ? 'Finish' : 'Next'}
+                                    </button>
+                                </div>
+                            )}
+                            <div className="footer">
+                                <Footer />
                             </div>
-                        ))}
+                            
+                        </div>
                     </div>
-                    <button onClick={handleNextQuestion} disabled={selectedOption === null}>
-                        {currentQuestion === questions.length - 1 ? 'Finish' : 'Next'}
-                    </button>
-                    <Footer />
                 </div>
-            )}
+            </div>
         </div>
+
+
     );
 };
 

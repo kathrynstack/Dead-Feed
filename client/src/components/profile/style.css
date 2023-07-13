@@ -1,27 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
 
-.card-body {
-    /* background-image: linear-gradient(white, red); */
+.card {
     border-radius: 5px;
+    width: 500px;
+    height: 600px;
     box-shadow: 0 0 10px 0 white;
 }
 
-.outer {
-    padding: 5px;
-    filter: drop-shadow(5px 5px 10px black)
+.card-body {
+    border-radius: 5px;
 }
+
 
 .badges {
     padding-bottom: 10px;
-}
-
-.bio {
-   padding: 20px; 
-   resize: none;
 }
 
 h1 {
     color: #9a0707;
     text-align: center;
     font-family: 'Nosifer', sans-serif;
+}
+
+.footer-profile {
+    padding-top: 160px;
 }

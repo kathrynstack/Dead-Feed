@@ -62,7 +62,7 @@ function App() {
             element={<Signup />}
           />
           <Route
-            path="/"
+            path="/landing"
             element={<Landing />}
           />
           <Route

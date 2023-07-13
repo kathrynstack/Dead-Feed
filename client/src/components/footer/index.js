@@ -12,22 +12,22 @@ function Footer() {
     return (
         <nav className="navbar">
             <div className="home">
-                <Link to="/landing">
+                <Link to="/landing" className="link">
                     <img src={HomeIcon} alt="Home" />
                 </Link>
             </div>
             <div className="quiz">
-                <Link to="/quiz">
+                <Link to="/quiz" className="link">
                     <img src={QuizIcon} alt="Quiz" />
                 </Link>
             </div>
             <div className="new-post">
-                <Link to="/new-post">
+                <Link to="/newpost" className="link">
                     <img src={NewPostIcon} alt="NewPost" />
                 </Link>
             </div>
             <div className="profile">
-                <Link to="/">
+                <Link to="/profile" className="link">
                     <img src={ProfileIcon} alt="Profile" />
                 </Link>
             </div>
