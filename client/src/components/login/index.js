@@ -54,7 +54,7 @@ export default function Login() {
                             <a href="#!">Forgot password?</a>
                         </p>
                         <button className="submit" type="submit">
-                            Login
+                        <Link to="/profile" className="link">Login</Link>
                         </button>
                         <div>
                             <p className="mb-0">

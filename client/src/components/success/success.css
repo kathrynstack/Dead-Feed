@@ -1,0 +1,32 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+body {
+    background-color: black;
+}
+
+
+p {
+    font-family: 'Poppins';
+    font-size: small; 
+    }
+
+.success-container {
+    /* background-color: #363535; */
+    background-image: url(../sign-up/3839661.jpeg);
+    background-size: 350px;
+    padding: 25px;
+    border-radius: 5px;
+    width: 500px;
+    box-shadow: 0 0 10px 0 white;
+  }
+
+  h2 {
+    color: #800000;
+    text-align: center;
+    font-family: 'Nosifer', sans-serif;
+    font-size: 3em;
+    letter-spacing: 3px;
+    text-shadow: 0 0 6px 3px white;
+    font-weight: normal;
+  }
