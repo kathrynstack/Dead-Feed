@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap');
 
+h2 {
+  font-family: 'Londrina Solid', cursive;
+  font-size: 40px;
+}
 
-.image-upload>input {
+/* .image-upload>input {
     display: none;
-  }
+  } */
 
   #upload-img {
     margin-top: 50%;
@@ -13,4 +18,15 @@
 
 #card {
   background-color: black;
+}
+
+.PostBtn {
+  background-color: rgb(72, 70, 70);
+  padding-left: 50px;
+  padding-right: 50px; 
+  font-family: 'Londrina Solid', cursive;
+}
+
+.PostBtn:hover {
+  background-color: #520000;
 }
