@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "./style.css";
 import uploadPic from "./upload.svg";
+import Footer from '../footer';
 
 // const imagekit = new ImageKit({
 //     publicKey: 'public_lkSMFMncXOSQS59s2TlNPGgmorU=',
@@ -53,6 +54,9 @@ const UploadImagePage = () => {
                     </div>
                 </div>
             </div>
+            <div className="footer-profile">
+        <Footer />
+      </div>
         </div>
     );
 };
