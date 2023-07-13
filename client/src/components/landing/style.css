@@ -1,19 +1,118 @@
-
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
 body {
-    background-color: black;
+  background-color: #fafafa;
+  font-family: 'Poppins', sans-serif;
 }
 
-h2 {
-    font-family: 'Poppins';
-    font-size: medium;
-    text-align: center;
-    font-weight: bold;
+.container {
+  max-width: 500px;
+ /* margin: 0 auto; 
+   padding: 20px; */
+}
+
+.post-container {
+  background-color: #000000;
+  border: 1px solid #3d0000;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.post-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.post-username {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.post-content {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.post-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  
+}
+
+.post-likes {
+  font-size: 14px;
+  color: #888;
+}
+
+.post-comments {
+  font-size: 20px;
+}
+
+.comment-container {
+  display: flex;
+  align-items: center;
 
 }
 
-h3 {
-    font-family: 'Poppins';
-    font-size: small;
+.comment-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.comment-username {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.comment-text {
+  font-size: 12px;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .post-container {
+    padding: 5px;
+  }
+  
+  .post-username {
+    font-size: 12px;
+  }
+  
+  .post-content {
+    font-size: 14px;
+  }
+  
+  .post-image {
+    max-height: 200px;
+  }
+  
+  .post-likes,
+  .post-comments,
+  .comment-username,
+  .comment-text {
+    font-size: 12px;
+  }
+}
+
+.footer-landing {
+    background-color: #000000;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🔪</text></svg>") 16 0, auto;
 }

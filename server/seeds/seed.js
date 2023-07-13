@@ -1,8 +1,9 @@
 const db = require('../config/connection');
 const { User, Post } = require('../models');
 
-const userData = require('../../client/src/components/login/userData.json');
-const postData = require('./postData.json')
+const userData = require('./userData'); 
+const postData = require('./postData.json'); 
+const feedData = require('./feedData.json'); 
 
 const seedDatabase = async () => {
 
