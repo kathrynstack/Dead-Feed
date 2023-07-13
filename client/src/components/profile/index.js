@@ -26,7 +26,7 @@ export default function Profile() {
                             <div className="row">
                                 <div className="col-md-12 col-xs-12 text-light" align="center">
                                     <img className="w-50" src={ProfilePic} alt="Avatar" />
-                                    <h1 className="username p-2">Gabby Pinto</h1>
+                                    <h1 className="username p-2">Ray_Mcf</h1>
                                     <span className="badges">Badges Go Here</span>
                                 </div>
                                <div className="footer-profile">
