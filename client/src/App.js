@@ -59,7 +59,7 @@ function App() {
             element={<Login />}
             />
           <Route
-            path="/login"
+            path="/"
             element={<Login />}
           />
           <Route
