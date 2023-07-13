@@ -75,6 +75,16 @@ const userResolvers = {
       }
       return `User not found`;
     },
+
+    addPost: async (_, params) => {
+        console.log(params);
+        const response = await Post.create(params)
+        if (response)
+        {
+          return `Post created!`;
+        }
+      },
+
   },
   
   User: {
