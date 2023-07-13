@@ -7,6 +7,7 @@ import Landing from "./components/landing/index";
 import Quiz from "./components/quiz/index";
 import Signup from "./components/sign-up/index";
 import NewPost from "./components/new-post/index";
+import Success from "./components/success"
 import "./assets/global-stylesheet/style.css";
 // import React from 'react';
 import {
@@ -56,6 +57,10 @@ function App() {
           <Route
             path="/"
             element={<Login />}
+          />
+          <Route
+            path="/success"
+            element={<Success />}
           />
           <Route
             path="/signup"

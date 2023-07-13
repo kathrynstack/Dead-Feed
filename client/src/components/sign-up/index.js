@@ -2,26 +2,13 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../../utils/mutations';
-import Login from '../login/index';
 import 'bootstrap/dist/css/bootstrap.css';
 import './style.css';
 
-export default function Signup() {
-    const [formState, setFormState] = useState({ username: '', email: '', password: '' });
-    const [addUser] = useMutation(ADD_USER);
+export default function SignUp() {
+    const [formState, setFormState] = useState({ username: '', email: '', password: '', });
 
-    const handleFormSubmit = async (event) => {
-        event.preventDefault();
-        const mutationResponse = await addUser({
-            variables: {
-                username: formState.username,
-                email: formState.email,
-                password: formState.password,
-            },
-        });
-        const token = mutationResponse.data.addUser.token;
-        // Auth.login(token);
-    };
+    const [addUser] = useMutation(ADD_USER);
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -29,6 +16,22 @@ export default function Signup() {
             ...formState,
             [name]: value,
         });
+    };
+
+    const handleFormSubmit = async (event) => {
+        event.preventDefault();
+        try {
+            const { data } = await addUser({
+                variables: { ...formState },
+            });
+            const token = data.register.token;
+            console.log('Token:', token);
+
+        } catch (e) {
+            console.error(e);
+        }
+
+        setFormState({ username: '', email: '', password: '', });
     };
 
     return (
@@ -73,10 +76,9 @@ export default function Signup() {
                         </label>
                     </div>
                     <button className="signupBtn" type="submit">
-                        Signup
+                        <Link to="/success" className="loginLink">Signup</Link>
                     </button>
 
-                    <Link to="/login" className="loginLink">← Go to Login</Link>
                 </form>
             </div>
         </section>

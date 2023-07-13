@@ -1,25 +1,34 @@
-const { AuthenticationError } = require('apollo-server-express');
-const User = require('../models/User');
+const jwt = require('jsonwebtoken');
 
-const authenticate = async (context) => {
-  const authHeader = context.req.headers.authorization;
-
-  if (authHeader) {
-    const token = authHeader.split(' ')[1];
-
-    if (token) {
-      const user = await User.findOne({ token });
-
-      if (user) {
-        return user;
-      }
-      throw new AuthenticationError('Invalid token');
-    }
-    throw new AuthenticationError('Authentication token must be provided');
-  }
-  throw new AuthenticationError('Authorization header must be provided');
-};
+const secret = 'mysecretsshhhhh';
+const expiration = '2h';
 
 module.exports = {
-  authenticate,
+  authMiddleware: function ({ req }) {
+    // allows token to be sent via req.body, req.query, or headers
+    let token = req.body.token || req.query.token || req.headers.authorization;
+
+    // ["Bearer", "<tokenvalue>"]
+    if (req.headers.authorization) {
+      token = token.split(' ').pop().trim();
+    }
+
+    if (!token) {
+      return req;
+    }
+
+    try {
+      const { data } = jwt.verify(token, secret, { maxAge: expiration });
+      req.user = data;
+    } catch {
+      console.log('Invalid token');
+    }
+
+    return req;
+  },
+  signToken: function ({ username, email, _id }) {
+    const payload = { username, email, _id };
+
+    return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
+  },
 };

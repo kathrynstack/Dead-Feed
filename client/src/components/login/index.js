@@ -53,7 +53,7 @@ export default function Login() {
                             </label>
                         </div>
                         <button className="submit" type="submit">
-                            Login
+                        <Link to="/profile" className="link">Login</Link>
                         </button>
                         <div>
                             <p className="mb-0">

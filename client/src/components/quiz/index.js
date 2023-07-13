@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import "./style.css";
 import Footer from "../footer";
+import Chucky from "./badges/Chucky.png";
+import Hannibal from "./badges/Hannibal.png";
+import Freddy from "./badges/Freddy.png";
+import Jigsaw from "./badges/Jigsaw.png";
+import Ghostface from "./badges/Jigsaw.png";
 
 // Quiz questions 
 const Quiz = () => {
@@ -138,11 +143,42 @@ const Quiz = () => {
 
     ];
 
+    //badges 
+    const badges = {
+        'Ghostface': {
+            name: 'Ghostface Badge',
+            image: Ghostface,
+        },
+        'Chucky': {
+            name: 'Chucky Badge',
+            image: Chucky,
+        },
+        'Jigsaw': {
+            name: 'Jigsaw Badge',
+            image: Jigsaw,
+        },
+        'Freddy': {
+            name: 'Freddy Badge',
+            image: Freddy,
+        },
+        'Hannibal': {
+            name: 'Hannibal Badge',
+            image: Hannibal,
+        },
+
+    };
+
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [selectedOption, setSelectedOption] = useState(null);
     const [score, setScore] = useState(0);
     const [showResult, setShowResult] = useState(false);
     const [characterResult, setCharacterResult] = useState(null);
+    const [earnedBadges, setEarnedBadges] = useState([]);
+
+    const awardBadge = (characterName) => {
+        const badge = badges[characterName];
+        setEarnedBadges((prevBadges) => [...prevBadges, badge]);
+    };
 
     const handleOptionClick = (score) => {
         setSelectedOption(score);
@@ -158,8 +194,11 @@ const Quiz = () => {
         if (nextQuestion < questions.length) {
             setCurrentQuestion(nextQuestion);
         } else {
-            // character based on the score
-            const resultCharacter = characters.find((character) => character.name === getCharacterName());
+            const resultCharacterName = getCharacterName();
+            awardBadge(resultCharacterName);
+            const resultCharacter = characters.find(
+                (character) => character.name === resultCharacterName
+            );
             setCharacterResult(resultCharacter);
             setShowResult(true);
         }
@@ -186,6 +225,7 @@ const Quiz = () => {
         setScore(0);
         setCharacterResult(null);
         setShowResult(false);
+        setEarnedBadges([]);
     };
 
     return (
@@ -200,6 +240,17 @@ const Quiz = () => {
                                     <h3>You are {characterResult.name}!</h3>
                                     <img src={characterResult.imageUrl} alt="Character" />
                                     <p>{characterResult.description}</p>
+                                    <div className="badges-container">
+                                        <h3>Earned Badges:</h3>
+                                        <ul>
+                                            {earnedBadges.map((badge, index) => (
+                                                <li key={index}>
+                                                    <img src={badge.image} alt={badge.name} />
+                                                    <span>{badge.name}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
                                     <button onClick={restartQuiz}>Dare to restart?</button>
                                 </div>
                             ) : (
@@ -219,22 +270,30 @@ const Quiz = () => {
                                             </div>
                                         ))}
                                     </div>
+                                    <div className="badges-container">
+                                        <h3>Earned Badges:</h3>
+                                        <ul>
+                                            {earnedBadges.map((badge, index) => (
+                                                <li key={index}>
+                                                    <img src={badge.image} alt={badge.name} />
+                                                    <span>{badge.name}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
                                     <button onClick={handleNextQuestion} disabled={selectedOption === null}>
                                         {currentQuestion === questions.length - 1 ? 'Finish' : 'Next'}
                                     </button>
+                                    <div className="footer">
+                                        <Footer />
+                                    </div>
                                 </div>
                             )}
-                            <div className="footer">
-                                <Footer />
-                            </div>
-                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
     );
 };
 
