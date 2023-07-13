@@ -21,6 +21,16 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
 
+app.get('/api/users', (req, res) => {
+  const users = [
+    { id: 1, username: 'Ray', email: 'Ray@gmail.com' },
+    { id: 2, username: 'Katty', email: 'Kathryn@gmail.com' },
+    { id: 3, username: 'Cole', email: 'Cole@gmail.com' },
+  ];
+  
+  res.json(users.map(user => ({ username: user.username, email: user.email })));
+});
+
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
