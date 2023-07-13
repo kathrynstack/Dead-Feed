@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./style.css";
 import Footer from '../footer';
-import postData from '../../../../server/seeds/postData.json';
+// import postData from '../../../../server/seeds/postData.json';
 
 const postData = [
   {
