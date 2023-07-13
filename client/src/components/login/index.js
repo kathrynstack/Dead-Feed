@@ -28,6 +28,7 @@ export default function Login() {
                     <form onSubmit={handleLogin}>
                         <div className="form">
                             <input
+                                placeholder="Email"
                                 type="email"
                                 id="typeEmailX"
                                 value={email}
@@ -40,6 +41,7 @@ export default function Login() {
                         </div>
                         <div className="form">
                             <input
+                                placeholder="*****"
                                 type="password"
                                 id="typePasswordX"
                                 value={password}
@@ -50,9 +52,6 @@ export default function Login() {
                                 Password
                             </label>
                         </div>
-                        <p className="forgotPassword">
-                            <a href="#!">Forgot password?</a>
-                        </p>
                         <button className="submit" type="submit">
                         <Link to="/profile" className="link">Login</Link>
                         </button>
@@ -60,7 +59,7 @@ export default function Login() {
                             <p className="mb-0">
                                 Don't have an account?{' '}
                                 <Link to="/signup" className="link">Signup</Link>
-                                
+
                             </p>
                         </div>
                     </form>

@@ -6,7 +6,7 @@ import "./style.css";
 import uploadPic from "./upload.svg";
 import Footer from "../footer";
 
-import { IKContext, IKImage, IKUpload } from "imagekitio-react";
+// import { IKContext, IKImage, IKUpload } from "imagekitio-react";
 
 const UploadImagePage = () => {
     const [formState, setFormState] = useState({
@@ -114,7 +114,7 @@ const UploadImagePage = () => {
                                         </label>
                                     </div> */}
 
-                                        <IKContext publicKey={ik_public_key} urlEndpoint={ik_endpoint} authenticationEndpoint={ik_auth_end_point}>
+                                        {/* <IKContext publicKey={ik_public_key} urlEndpoint={ik_endpoint} authenticationEndpoint={ik_auth_end_point}>
                                             <IKUpload
                                                 inputRef={inputRef}
                                                 ref={ikUploadRef}
@@ -124,7 +124,7 @@ const UploadImagePage = () => {
                                                 onError={onError}
                                                 style={{ display: "none" }}
                                             />
-                                        </IKContext>
+                                        </IKContext> */}
                                         {ikUploadRef && titleRef.current.value && descRef.current.value && (
                                                 <button className="PostBtn"  onClick={(event) => {event.preventDefault(); inputRef.current.click()}}>
                                                     Upload Photo & Post
