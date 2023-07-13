@@ -73,10 +73,10 @@ export default function Signup() {
                         </label>
                     </div>
                     <button className="signupBtn" type="submit">
-                        Signup
+                    <Link to="/profile" className="loginLink">Signup</Link>
                     </button>
 
-                    <Link to="/login" className="loginLink">← Go to Login</Link>
+                    
                 </form>
             </div>
         </section>
