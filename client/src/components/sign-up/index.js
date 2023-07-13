@@ -73,7 +73,7 @@ export default function Signup() {
                         </label>
                     </div>
                     <button className="signupBtn" type="submit">
-                    <Link to="/profile" className="loginLink">Signup</Link>
+                    <Link to="/success" className="loginLink">Signup</Link>
                     </button>
 
                     
