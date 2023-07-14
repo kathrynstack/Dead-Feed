@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
-import { useMutation } from '@apollo/client';
-import { ADD_POST } from '../../utils/mutations';
+// import { useMutation } from '@apollo/client';
+// import { ADD_POST } from '../../utils/mutations';
 import "bootstrap/dist/css/bootstrap.css";
 import "./style.css";
 
