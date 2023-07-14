@@ -14,7 +14,7 @@ Dead Feed is a social media based platform where horror lovers can come together
 https://sleepy-cove-79106-da36d740fd7b.herokuapp.com/
 - Image: ![Feed](client\build\Dead-feedland.JPG)
 - Image: ![Login](client\build\Dead-feed.JPG)
-- Image: ![Quiz](client\build\quiz-page.JPG)
+- Image: ![Quiz](C:\Users\raybo\bootcamp\Dead-Feed\client\build\quiz-page.JPG)
 - Image: ![Mongo](client\build\Mongodb.JPG)
   
 ## License
