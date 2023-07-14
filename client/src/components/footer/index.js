@@ -6,7 +6,7 @@ import HomeIcon from "./icons/home.png";
 import QuizIcon from "./icons/quiz.png";
 import NewPostIcon from "./icons/new-post.png";
 import ProfileIcon from "./icons/profile.png";
-import Profile from "../profile";
+
 
 function Footer() {
     return (

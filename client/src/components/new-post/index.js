@@ -16,19 +16,19 @@ const UploadImagePage = () => {
 
     const [addPost] = useMutation(ADD_POST);
 
-    const handleCreatePost = async (fileInfo) => {
-        console.log("IN HANDLE");
-        console.log(fileInfo);
+    // const handleCreatePost = async (fileInfo) => {
+    //     console.log("IN HANDLE");
+    //     console.log(fileInfo);
 
-        const mutationResponse = await addPost({
-            variables: {
-                title: formState.title,
-                description: formState.description,
-                imageID: fileInfo.fileId,
-            },
-        });
-        console.log(mutationResponse);
-    };
+    //     const mutationResponse = await addPost({
+    //         variables: {
+    //             title: formState.title,
+    //             description: formState.description,
+    //             imageID: fileInfo.fileId,
+    //         },
+    //     });
+    //     console.log(mutationResponse);
+    // };
 
     const handleChange = (event) => {
         const { id, value } = event.target;
