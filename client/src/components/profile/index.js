@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
-import { GET_USER, LOGIN } from '../../utils/queries';
+// import { useQuery } from '@apollo/client';
+// import { GET_USER, LOGIN } from '../../utils/queries';
 import 'bootstrap/dist/css/bootstrap.css';
 import './style.css';
 import ProfilePic from './profilepic.png';

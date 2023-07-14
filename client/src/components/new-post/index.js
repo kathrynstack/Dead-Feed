@@ -3,8 +3,7 @@ import { useMutation } from '@apollo/client';
 import { ADD_POST } from '../../utils/mutations';
 import "bootstrap/dist/css/bootstrap.css";
 import "./style.css";
-import uploadPic from "./upload.svg";
-import Footer from "../footer";
+
 
 // import { IKContext, IKImage, IKUpload } from "imagekitio-react";
 
@@ -39,20 +38,20 @@ const UploadImagePage = () => {
         });
     };
 
-    const onSuccess = async (fileInfo) => {
-        // create a new post and redirect to landing
-        console.log("File uploaded");
-        handleCreatePost(fileInfo);
+    // const onSuccess = async (fileInfo) => {
+    //     // create a new post and redirect to landing
+    //     console.log("File uploaded");
+    //     handleCreatePost(fileInfo);
         
-    }
-    const onError = async (error) => {
-        console.error(error);
-    }
+    // }
+    // const onError = async (error) => {
+    //     console.error(error);
+    // }
     
-    const ik_public_key = "public_qpCQuM9Hn4TLcJQohauHIRBD+B8=";
-    const ik_endpoint = "https://ik.imagekit.io/lscjf1cpc";
-    // const ik_auth_end_point = window.location.origin.replace(':3000/', ':3001/') + '/imagekit-auth';
-    const ik_auth_end_point = "http://localhost:3001/imagekit-auth";
+    // const ik_public_key = "public_qpCQuM9Hn4TLcJQohauHIRBD+B8=";
+    // const ik_endpoint = "https://ik.imagekit.io/lscjf1cpc";
+    // // const ik_auth_end_point = window.location.origin.replace(':3000/', ':3001/') + '/imagekit-auth';
+    // const ik_auth_end_point = "http://localhost:3001/imagekit-auth";
 
     const inputRef = useRef(null);
     const ikUploadRef = useRef(null);

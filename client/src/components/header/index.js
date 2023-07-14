@@ -1,7 +1,6 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 import "./style.css";
-import { Link } from "react-router-dom";
 import logo from './red-skull-drawing-skull.png';
 
 function Header() {

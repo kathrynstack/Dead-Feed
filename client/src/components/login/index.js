@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import './style.css';
 import userData from './userData.json';
-import Header from "../header";
 
 export default function Login() {
     const [email, setEmail] = useState('');
