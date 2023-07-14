@@ -37,6 +37,8 @@ const typeDefs = gql`
     deletePost(id: ID!): ID
     followUser(id: ID!): User
     deleteUser(id: ID!): String
+    addPost(title: String!, content: String!): Post
+
   }
 `;
 
