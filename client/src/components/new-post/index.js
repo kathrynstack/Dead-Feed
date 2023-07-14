@@ -14,7 +14,7 @@ const UploadImagePage = () => {
         new_post_img_input: "",
     });
 
-    const [addPost] = useMutation(ADD_POST);
+    // const [addPost] = useMutation(ADD_POST);
 
     // const handleCreatePost = async (fileInfo) => {
     //     console.log("IN HANDLE");
